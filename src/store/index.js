@@ -7,5 +7,3 @@ export default configureStore({
     todo,
   },
 });
-
-// TODO: TERMINAR MANAÑA QUEDAMOS EN EL MINUTO 1:07:33
