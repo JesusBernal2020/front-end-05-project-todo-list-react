@@ -46,7 +46,7 @@ The project is considered completed; however, ongoing improvements and final adj
 
 ## Project Access
 
-You can access the deployed project via this [ToDo List](https://weather-app-jbx.netlify.app). Additionally, you have the option to clone the project, install the necessary packages using `npm install`, and run it using `npm run dev`.
+You can access the deployed project via this [ToDo List](https://todo-list-app-vll.netlify.app). Additionally, you have the option to clone the project, install the necessary packages using `npm install`, and run it using `npm run dev`.
 
 ## Developers
 
