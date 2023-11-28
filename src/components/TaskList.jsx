@@ -6,7 +6,7 @@ const TaskList = () => {
   console.log(tasks);
 
   return (
-    <section className="max-w-[320px] p-4 mx-auto grid gap-8">
+    <section className=" p-4 flex flex-col items-center gap-8">
       {tasks.map((task) => (
         <Task key={task.id} task={task} />
       ))}

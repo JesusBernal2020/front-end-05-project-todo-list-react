@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  tasks: [],
+  tasks: JSON.parse(localStorage.getItem('tasks')) ?? [],
   isModalOpen: false,
   taskToEdit: null,
 };
@@ -16,6 +16,8 @@ const todoSlice = createSlice({
 
     addTask: (state, action) => {
       const newTasks = [...state.tasks, action.payload];
+      //quiero guardar las tareas que tengo en locaStorage
+      localStorage.setItem('tasks', JSON.stringify(newTasks));
       state.tasks = newTasks;
     },
     changeDoneTask: (state, action) => {
@@ -28,12 +30,16 @@ const todoSlice = createSlice({
           return task;
         }
       });
+      //quiero almacenar de nuevo mi informacion en localStorage
+      localStorage.setItem('tasks', JSON.stringify(newTasks));
       state.tasks = newTasks;
     },
 
     deleteTask: (state, action) => {
       const idTaskToDelete = action.payload;
       const newTask = state.tasks.filter((task) => task.id !== idTaskToDelete);
+      //quiero almacenar la nueva informacion de las tareas
+      localStorage.setItem('tasks', JSON.stringify(newTask));
       state.tasks = newTask;
     },
 
@@ -50,6 +56,8 @@ const todoSlice = createSlice({
           return task;
         }
       });
+      //quiero almacenar las tareas en localStoarge
+      localStorage.setItem('tasks', JSON.stringify(newTasks));
       state.tasks = newTasks;
     },
   },
