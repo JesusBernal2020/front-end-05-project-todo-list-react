@@ -24,7 +24,7 @@ const Task = ({ task }) => {
   };
 
   return (
-    <article className="grid w-[300px] gap-5 bg-sky-900 p-4 rounded-md ">
+    <article className="grid w-[300px] md:w-[400px] gap-5 bg-sky-900 p-4 rounded-md ">
       <div className="flex justify-between">
         <div className="flex gap-2">
           <input
@@ -58,7 +58,7 @@ const Task = ({ task }) => {
       <hr />
       <div className="p-5">
         <p
-          className={` text-white text-lg text-center ${
+          className={` text-white text-lg md:text-xl text-center ${
             task.isDone && 'line-through'
           } `}
         >
